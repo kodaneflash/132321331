@@ -18,12 +18,12 @@ export default function ImageGallery({ images }: iAppProps) {
     <div className="grid gap-4 lg:grid-cols-5">
       <div className="order-last flex gap-4 lg:order-none lg:flex-col">
         {images.map((image: any, idx: any) => (
-          <div key={idx} className="rounded-lg bg-gray-100">
+          <div key={idx} className="rounded-lg bg-background">
             <Image
               src={urlFor(image).url()}
               width={500}
               height={500}
-              alt="IDEmpirePremium Fake ID"
+              alt="Premium Fake ID | IDEmpire"
               className="h-full w-full object-contain object-center cursor-pointer"
               onClick={() => handleSmallImageClick(image)}
             />
@@ -31,10 +31,10 @@ export default function ImageGallery({ images }: iAppProps) {
         ))}
       </div>
 
-      <div className="relative  rounded-lg bg-gray-100 lg:col-span-4">
+      <div className="relative  rounded-lg bg-background lg:col-span-4">
         <Image
           src={urlFor(bigImage).url()}
-          alt="Photo"
+          alt="Premium Fake ID | IDEmpire"
           width={500}
           height={500}
           className="h-full w-full object-contain object-center"

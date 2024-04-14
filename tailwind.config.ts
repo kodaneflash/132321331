@@ -1,12 +1,30 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
+// tailwind.config.ts
+import plugin from 'tailwindcss/plugin';
+
+type UtilityAdder = (utils: any) => void;
+type ThemeResolver = (key: string) => string;
+
+const customPlugin = plugin(function({ addUtilities, theme }: { addUtilities: UtilityAdder, theme: ThemeResolver }) {
+  const newUtilities = {
+    '.gradient-text': {
+      background: `linear-gradient(to right, ${theme('colors.white')}, ${theme('colors.gray.400')})`,
+      '-webkit-background-clip': 'text',
+      '-webkit-text-fill-color': 'transparent',
+      display: 'inline',
+    },
+  };
+  addUtilities(newUtilities);
+});
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     container: {
       center: true,
@@ -72,5 +90,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-}
+  plugins: [
+    require("tailwindcss-animate"),
+    customPlugin
+  ],
+};

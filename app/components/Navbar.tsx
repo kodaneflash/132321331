@@ -25,7 +25,7 @@ export default function Navbar() {
           </h1>
         </Link>
 
-        <nav className="hidden gap-12 lg:flex 2xl:ml-16">
+        <nav className="hidden gap-12 lg:flex 2xl:ml-16 text-white rounded-md shadow-lg bg-background">
           {links.map((link, idx) => (
             <div key={idx}>
               {pathname === link.href ? (
@@ -38,7 +38,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href={link.href}
-                  className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-primary"
+                  className="text-lg font-semibold text-white hover:text-gray-200 transition duration-100 hover:text-primary"
                 >
                   {link.name}
                 </Link>
@@ -49,11 +49,11 @@ export default function Navbar() {
 
         <div className="flex divide-x border-r sm:border-l">
           <Button
-            variant={"outline"}
+            variant={"ghost"}
             onClick={() => handleCartClick()}
             className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none"
           >
-            <ShoppingBag />
+            <ShoppingBag className="text-white" />
             <span className="hidden text-xs font-semibold text-gray-500 sm:block">
               Cart
             </span>

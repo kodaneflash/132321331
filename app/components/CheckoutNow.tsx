@@ -28,13 +28,17 @@ export default function CheckoutNow({
     price_id: price_id,
   };
   return (
-    <Button
-      variant="outline"
-      onClick={() => {
-        buyNow(product.price_id);
-      }}
-    >
-      Checkout Now
-    </Button>
-  );
+  <Button
+    variant="outline"
+    onClick={() => buyNow(product.price_id)}
+    style={{
+      color: 'white', 
+      backgroundColor: 'blue', 
+      borderColor: 'white', 
+      borderWidth: '2px'
+    }}
+  >
+    Checkout Now
+  </Button>
+);
 }
