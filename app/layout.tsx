@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-     <Head>
+      <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Shop for premium fake IDs with scannable barcodes, microprint, and more. Available for nearly all states with fast shipping and reliable support." />
@@ -28,7 +28,7 @@ export default function RootLayout({
         <title>IDEmpire - #1 Trusted Vendor for Premium Fake IDs</title>
         <meta property="og:title" content="IDEmpire - #1 Trusted Vendor for Premium Fake IDs" />
         <meta property="og:description" content="Shop for premium fake IDs that feature scannable barcodes, microprint, OVI ink, OVD holograms, laser engraving & more. Available for nearly all states with fast shipping and reliable support." />
-        <meta property="og:image" content="https://idempire.us/og-image.png" />
+        <meta property="og:image" content="/og-image.png" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1080" />
       </Head>
