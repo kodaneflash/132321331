@@ -55,7 +55,6 @@ export default async function ProductPge({
               </Button>
 
               <span className="text-sm text-gray-500 transition duration-100">
-                56 Ratings
               </span>
             </div>
 

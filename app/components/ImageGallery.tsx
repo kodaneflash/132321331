@@ -34,14 +34,13 @@ export default function ImageGallery({ images }: iAppProps) {
       <div className="relative  rounded-lg bg-gray-100 lg:col-span-4">
         <Image
           src={urlFor(bigImage).url()}
-          alt="IDEmpirePremium Fake ID"
+          alt="Photo"
           width={500}
           height={500}
           className="h-full w-full object-contain object-center"
         />
 
         <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">
-          Sale
         </span>
       </div>
     </div>
