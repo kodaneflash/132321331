@@ -10,8 +10,9 @@
 
 @layer base {
   :root {
-    --background: 224 71.4% 4.1%; /* Light mode background updated to specific black */
-    --foreground: 224 71.4% 4.1%; /* Foreground color */
+    --background-hsl: 224, 71.4%, 4.1%;  /* Dark background */
+    --foreground-hsl: 210, 20%, 98%;  /* Light text */
+    --border-color-hsl: 210, 89%, 3%;  /* Subtle border color */
     --card: 0 0% 100%; /* Card background */
     --card-foreground: 224 71.4% 4.1%; /* Card text */
     --popover: 0 0% 100%; /* Popover background */
@@ -26,14 +27,14 @@
     --accent-foreground: 220.9 39.3% 11%; /* Accent text */
     --destructive: 0 84.2% 60.2%; /* Destructive color */
     --destructive-foreground: 210 20% 98%; /* Destructive text */
-    --border: 210 89% 3%; /* Border color set to match background */
+    --border: 210 89% 3%; /* Border color */
     --input: 220 13% 91%; /* Input background */
     --ring: 262.1 83.3% 57.8%; /* Focus ring color */
     --radius: 0.5rem; /* Border radius */
   }
 
   .dark {
-    --background: 224 71.4% 4.1%; /* Dark mode background updated to specific black */
+    --background: 224 71.4% 4.1%; /* Dark mode background */
     --foreground: 210 20% 98%; /* Dark mode text */
     --card: 224 71.4% 4.1%; /* Dark mode card background */
     --card-foreground: 210 20% 98%; /* Dark mode card text */
@@ -49,20 +50,30 @@
     --accent-foreground: 210 20% 98%; /* Dark mode accent text */
     --destructive: 0 62.8% 30.6%; /* Dark mode destructive color */
     --destructive-foreground: 210 20% 98%; /* Dark mode destructive text */
-    --border: 210 89% 3%; /* Dark mode border color set to match background */
+    --border: 210 89% 3%; /* Dark mode border color */
     --input: 215 27.9% 16.9%; /* Dark mode input background */
     --ring: 263.4 70% 50.4%; /* Dark mode focus ring color */
   }
-}
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+
+
   body {
-    @apply bg-background text-foreground;
-
-    
-    
+    background-color: hsl(var(--background-hsl)); /* Apply the background color */
+    color: hsl(var(--foreground-hsl)); /* Apply the text color */
+    border-color: hsl(var(--border-color-hsl)); /* Apply the border color */
   }
 }
+
+ /* Custom utility classes */
+ .bg-background {
+  background-color: hsl(var(--background-hsl));
+}
+
+.text-foreground {
+  color: hsl(var(--foreground-hsl));
+}
+
+.border-border {
+  border: 1px solid hsl(var(--border-color-hsl));
+}
+
