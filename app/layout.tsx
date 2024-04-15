@@ -38,7 +38,7 @@ export default function RootLayout({
           <ShoppingCartModal />
           {children}
         </CartProvider>
-      </body>a
+      </body>
     </html>
   );
 }
