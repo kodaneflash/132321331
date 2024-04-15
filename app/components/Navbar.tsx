@@ -53,7 +53,7 @@ export default function Navbar() {
            onClick={() => handleCartClick()}
          className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24"
             >
-             <ShoppingBag className="text-white" />  
+             <ShoppingBag />
              <span className="hidden text-xs font-semibold text-white sm:block">
                Cart
             </span>

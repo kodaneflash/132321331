@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-background {
+    background-color: var(--background);
+  }
+}
+
 @layer base {
   :root {
-    --background: 210 89% 3%; /* Light mode background updated */
+    --background: 224 71.4% 4.1%; /* Light mode background updated to specific black */
     --foreground: 224 71.4% 4.1%; /* Foreground color */
     --card: 0 0% 100%; /* Card background */
     --card-foreground: 224 71.4% 4.1%; /* Card text */
@@ -27,7 +33,7 @@
   }
 
   .dark {
-    --background: 224 71.4% 4.1%; /* Dark mode background */
+    --background: 224 71.4% 4.1%; /* Dark mode background updated to specific black */
     --foreground: 210 20% 98%; /* Dark mode text */
     --card: 224 71.4% 4.1%; /* Dark mode card background */
     --card-foreground: 210 20% 98%; /* Dark mode card text */
@@ -55,5 +61,8 @@
   }
   body {
     @apply bg-background text-foreground;
+
+    
+    
   }
 }

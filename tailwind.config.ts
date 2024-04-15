@@ -35,8 +35,7 @@ export default {
     },
     extend: {
       colors: {
-        background: 'hsl(var(--background-color-hsl))',
-        border: 'hsl(var(--background-color-hsl))',  // Set border color to match backgrou
+        border: 'hsl(var(--background-color-hsl))',  // Using th
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         foreground: "hsl(var(--foreground))",
