@@ -48,16 +48,17 @@ export default function Navbar() {
         </nav>
 
         <div className="flex divide-x border-r sm:border-l">
-          <Button
-            variant={"ghost"}
-            onClick={() => handleCartClick()}
-            className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none"
-          >
-            <ShoppingBag className="text-white" />
-            <span className="hidden text-xs font-semibold text-gray-500 sm:block">
-              Cart
+         <Button
+          variant={"ghost"}  // Assuming 'plain' is a variant without borders
+           onClick={() => handleCartClick()}
+         className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24"
+            >
+             <ShoppingBag className="text-white" />  
+             <span className="hidden text-xs font-semibold text-white sm:block">
+               Cart
             </span>
-          </Button>
+             </Button>
+           
         </div>
       </div>
     </header>
