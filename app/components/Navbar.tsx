@@ -17,7 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const { handleCartClick } = useShoppingCart();
   return (
-    <header className="mb-8 border-b">
+    <header className="mb-8 border-b border-border">
       <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
         <Link href="/">
             <h1 className="text-2xl md:text-4xl font-bold">
@@ -47,7 +47,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex divide-x border-r sm:border-l">
+        <div className="flex divide-x border-border sm:border-l">
          <Button
           variant={"ghost"}  // Assuming 'plain' is a variant without borders
            onClick={() => handleCartClick()}
